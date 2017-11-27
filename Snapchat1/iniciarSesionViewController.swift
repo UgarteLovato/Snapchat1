@@ -33,6 +33,7 @@ class iniciarSesionViewController: UIViewController {
                     }
                     else{
                         print("El usuario fue creado exitosamente")
+                        Database.database().reference().child("usuarios").child(user!.uid).child("email").setValue(user!.email)
                         self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
                     }
                 })
