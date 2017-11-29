@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,11 +111,64 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7Vf-se-Qck" id="NYF-0Y-qkq"/>
+                        <segue destination="uXY-sJ-Jxp" kind="show" identifier="versnapsegue" id="ZPf-4F-AO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suC-jj-f6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428" y="108"/>
+        </scene>
+        <!--Ver Snap View Controller-->
+        <scene sceneID="MbI-Zf-PiX">
+            <objects>
+                <viewController id="uXY-sJ-Jxp" customClass="VerSnapViewController" customModule="Snapchat1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="90y-VP-3t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHg-RT-l9i">
+                                <rect key="frame" x="166" y="636" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Nn3-6N-feN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZK-QD-0js">
+                                <rect key="frame" x="16" y="74" width="343" height="552"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="qMQ-rt-yM6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nZK-QD-0js" secondAttribute="trailing" constant="10" id="09S-WW-bbf"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="top" secondItem="90y-VP-3t3" secondAttribute="topMargin" constant="10" id="9oV-Vw-7qx"/>
+                            <constraint firstItem="dbi-QX-y3J" firstAttribute="bottom" secondItem="BHg-RT-l9i" secondAttribute="bottom" constant="10" id="Bne-QZ-awR"/>
+                            <constraint firstItem="BHg-RT-l9i" firstAttribute="top" secondItem="nZK-QD-0js" secondAttribute="bottom" constant="10" id="FK0-5p-jJa"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="top" secondItem="dbi-QX-y3J" secondAttribute="top" constant="10" id="Jw0-Id-R15"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="top" secondItem="dbi-QX-y3J" secondAttribute="top" constant="10" id="OJb-dK-54p"/>
+                            <constraint firstItem="BHg-RT-l9i" firstAttribute="top" secondItem="nZK-QD-0js" secondAttribute="bottom" constant="10" id="R3R-e1-Qif"/>
+                            <constraint firstItem="dbi-QX-y3J" firstAttribute="bottom" secondItem="BHg-RT-l9i" secondAttribute="bottom" constant="10" id="Rlk-AH-Faa"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="trailing" secondItem="90y-VP-3t3" secondAttribute="trailingMargin" constant="10" id="SXR-cT-1By"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="leading" secondItem="dbi-QX-y3J" secondAttribute="leading" constant="10" id="UDP-5S-WiL"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="leading" secondItem="dbi-QX-y3J" secondAttribute="leading" constant="10" id="UYx-Au-Lcd"/>
+                            <constraint firstItem="nZK-QD-0js" firstAttribute="leading" secondItem="dbi-QX-y3J" secondAttribute="leading" constant="10" id="Uk6-e7-6xo"/>
+                            <constraint firstItem="dbi-QX-y3J" firstAttribute="trailing" secondItem="nZK-QD-0js" secondAttribute="trailing" constant="10" id="op7-mp-G3O"/>
+                            <constraint firstItem="BHg-RT-l9i" firstAttribute="top" secondItem="nZK-QD-0js" secondAttribute="bottom" constant="10" id="ueM-Kd-HuV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dbi-QX-y3J"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="nZK-QD-0js" id="OPJ-CT-Yb4"/>
+                        <outlet property="label" destination="BHg-RT-l9i" id="3fC-yN-hq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWL-c8-jxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="820.83958020989508"/>
         </scene>
         <!--Title-->
         <scene sceneID="5uH-2Y-K4Y">

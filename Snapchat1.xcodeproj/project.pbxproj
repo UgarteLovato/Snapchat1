@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		509C5FDEC400A79520A1BF92 /* Pods_Snapchat1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C280AC792E579055FC6F245C /* Pods_Snapchat1.framework */; };
+		E233D8D21FCE31BB008D494D /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233D8D11FCE31BB008D494D /* VerSnapViewController.swift */; };
 		E2341D4B1FCC93B000AA3035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2341D4A1FCC93B000AA3035 /* AppDelegate.swift */; };
 		E2341D4D1FCC93B000AA3035 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2341D4C1FCC93B000AA3035 /* iniciarSesionViewController.swift */; };
 		E2341D501FCC93B000AA3035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2341D4E1FCC93B000AA3035 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		7D660E1AB957745B1332EFF4 /* Pods-Snapchat1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat1/Pods-Snapchat1.debug.xcconfig"; sourceTree = "<group>"; };
 		AC433C8B494AB25809C68605 /* Pods-Snapchat1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat1/Pods-Snapchat1.release.xcconfig"; sourceTree = "<group>"; };
 		C280AC792E579055FC6F245C /* Pods_Snapchat1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E233D8D11FCE31BB008D494D /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 		E2341D471FCC93B000AA3035 /* Snapchat1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2341D4A1FCC93B000AA3035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2341D4C1FCC93B000AA3035 /* iniciarSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iniciarSesionViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				E2341D511FCC93B000AA3035 /* Assets.xcassets */,
 				E2341D531FCC93B000AA3035 /* LaunchScreen.storyboard */,
 				E2341D561FCC93B000AA3035 /* Info.plist */,
+				E233D8D11FCE31BB008D494D /* VerSnapViewController.swift */,
 			);
 			path = Snapchat1;
 			sourceTree = "<group>";
@@ -164,6 +167,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 0;
+							};
 						};
 					};
 				};
@@ -210,6 +216,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat1/Pods-Snapchat1-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -217,6 +224,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -269,6 +277,7 @@
 				E2341D681FCCBB7500AA3035 /* ImagenViewController.swift in Sources */,
 				E29295171FCCD4DA00F25739 /* Usuario.swift in Sources */,
 				E2341D4B1FCC93B000AA3035 /* AppDelegate.swift in Sources */,
+				E233D8D21FCE31BB008D494D /* VerSnapViewController.swift in Sources */,
 				E2BD88361FCCE59400EEC07E /* Snap.swift in Sources */,
 				E2341D661FCCB88B00AA3035 /* SnapsViewController.swift in Sources */,
 				E29295131FCCC77F00F25739 /* ElegirUsuarioViewController.swift in Sources */,
