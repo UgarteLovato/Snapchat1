@@ -18,14 +18,17 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        Database.database().reference().child("usuarios").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: {(snaphot)in
+        Database.database().reference().child("usuarios").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: {(snapshot)in
             
         let snap = Snap()
         
-            snap.imagenURL = (snaphot.value as! NSDictionary)["imagenURL"] as! String
-            snap.from = (snaphot.value as! NSDictionary)["from"] as! String
-            snap.descrip = (snaphot.value as! NSDictionary)["descripcion"] as! String
-            snap.id = snaphot.key
+            snap.imagenURL = (snapshot.value as! NSDictionary)["imagenURL"] as! String
+            snap.from = (snapshot.value as! NSDictionary)["from"] as! String
+            snap.descrip = (snapshot.value as! NSDictionary)["descripcion"] as! String
+            snap.id = snapshot.key
+            snap.imagenID = (snapshot.value as! NSDictionary) ["imagenID"] as! String
+            
+            
            
             
         self.snaps.append(snap)
@@ -47,15 +50,27 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return snaps.count
+        if snaps.count == 0 {
+            return 1
+            
+        }
+        else{
+            return snaps.count
+        }
+        
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
             let cell = UITableViewCell()
+        if snaps.count == 0 {
+            cell.textLabel?.text = "No tienes SNAPS"
+        }
+        else{
             let snap = snaps[indexPath.row]
             cell.textLabel?.text = snap.from
+        }
             return cell
         }
     
@@ -76,4 +91,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func cerrarSesionTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }

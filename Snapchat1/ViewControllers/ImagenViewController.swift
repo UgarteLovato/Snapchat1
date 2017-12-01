@@ -23,6 +23,7 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        elegirContactoBoton.isEnabled = false
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +31,7 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
+        elegirContactoBoton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
         
     }
